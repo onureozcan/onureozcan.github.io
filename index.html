@@ -2,25 +2,27 @@
   <head>
   </head>
   <body>
-    <h2 id="place"></h2>
+    <h1 id="place"></h1>
+	<hr/>
+	<h2>@39.9152728,32.854442,18.5z</h2>
     <script>
-		setInterval(function() {
-			var millisInADay = 1000 * 60 * 60 * 24
-			var millisInAnHour = 1000 * 60 * 60
-			var millisInAMinute = 1000 * 60
-			var millisInASecond = 1000 
-			var targetDate = new Date("2022-03-19 10:00:00Z")
-			var diffAsMs = targetDate - new Date()
-			var days = Math.floor(diffAsMs / millisInADay)
-			diffAsMs -= days * millisInADay
-			var hours = Math.floor((diffAsMs) / millisInAnHour)
-			diffAsMs -= hours *  millisInAnHour
-			var minutes = Math.floor((diffAsMs) / millisInAMinute)
-			diffAsMs -= minutes *  millisInAMinute
-			var seconds = Math.floor((diffAsMs) / millisInASecond)
-			var text = `${days} gun, ${hours} saat, ${minutes} dakika, ${seconds} saniye kaldi`
-			place.innerText = text
-		}, 10)
+	setInterval(function() {
+		var millisInADay = 1000 * 60 * 60 * 24
+		var millisInAnHour = 1000 * 60 * 60
+		var millisInAMinute = 1000 * 60
+		var millisInASecond = 1000 
+		var targetDate = new Date("2022-03-19 10:00:00Z")
+		var diffAsMs = targetDate - new Date()
+		var days = Math.floor(diffAsMs / millisInADay)
+		diffAsMs -= days * millisInADay
+		var hours = Math.floor((diffAsMs) / millisInAnHour)
+		diffAsMs -= hours *  millisInAnHour
+		var minutes = Math.floor((diffAsMs) / millisInAMinute)
+		diffAsMs -= minutes *  millisInAMinute
+		var seconds = Math.floor((diffAsMs) / millisInASecond)
+		var text = `${days} gun, ${hours} saat, ${minutes} dakika, ${seconds} saniye kaldi`
+		place.innerText = text
+	}, 100)
     </script>
   </body>
 </html>
